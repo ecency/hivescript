@@ -1,0 +1,9 @@
+{
+  "name": "hivescript",
+  "version": "1.1.2",
+  "repository": {
+    "url": "git://github.com/ledgerconnect/hivescript.git",
+    "type": "git"
+  },
+  "license": "MIT"
+}
