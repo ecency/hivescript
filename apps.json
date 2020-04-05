@@ -21,5 +21,10 @@
   "actifit": {
     "name": "Actifit",
     "homepage": "https://actifit.io"
+  },
+  "travelfeed": {
+    "name": "TravelFeed",
+    "homepage": "https://travelfeed.io",
+    "url_scheme": "https://travelfeed.io/@{username}/{permlink}"
   }
 }
