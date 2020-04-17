@@ -28,7 +28,7 @@
     "url_scheme": "https://travelfeed.io/@{username}/{permlink}"
   },
   "3speak": {
-    "name": "3speak",
+    "name": "3Speak",
     "homepage": "https://3speak.online",
     "url_scheme": "https://3speak.online/watch?v={username}/{permlink}"
   }
