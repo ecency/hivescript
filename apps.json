@@ -32,5 +32,10 @@
     "name": "3Speak",
     "homepage": "https://3speak.online",
     "url_scheme": "https://3speak.online/watch?v={username}/{permlink}"
+  },
+  "steemstem": {
+    "name": "STEMsocial",
+    "homepage": "https://stem.openhive.network",
+    "url_scheme": "https://stem.openhive.network/#!/@{username}/{permlink}"
   }
 }
