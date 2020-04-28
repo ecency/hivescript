@@ -38,6 +38,11 @@
     "homepage": "https://stem.openhive.network",
     "url_scheme": "https://stem.openhive.network/#!/@{username}/{permlink}"
   },
+  "leofinance": {
+    "name": "Leo Finance",
+    "homepage": "https://leofinance.io",
+    "url_scheme": "https://leofinance.io/{category}/@{username}/{permlink}"
+  },
   "ctp": {
     "name": "ClickTrackProfit",
     "homepage": "https://www.ctptalk.com",
