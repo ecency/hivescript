@@ -43,7 +43,7 @@
     "homepage": "https://leofinance.io",
     "url_scheme": "https://leofinance.io/{category}/@{username}/{permlink}"
   },
-  "ctp": {
+  "clicktrackprofit": {
     "name": "ClickTrackProfit",
     "homepage": "https://www.ctptalk.com",
     "url_scheme": "https://www.ctptalk.com/{category}/@{username}/{permlink}"
