@@ -47,5 +47,10 @@
     "name": "ClickTrackProfit",
     "homepage": "https://www.ctptalk.com",
     "url_scheme": "https://www.ctptalk.com/{category}/@{username}/{permlink}"
+  },
+  "dtube": {
+    "name": "DTube",
+    "homepage": "https://d.tube",
+    "url_scheme": "https://d.tube/v/{username}/{permlink}"
   }
 }
