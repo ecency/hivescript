@@ -42,5 +42,10 @@
     "name": "Leo Finance",
     "homepage": "https://leofinance.io",
     "url_scheme": "https://leofinance.io/{category}/@{username}/{permlink}"
+  },
+  "dtube": {
+    "name": "DTube",
+    "homepage": "https://d.tube",
+    "url_scheme": "https://d.tube/v/{username}/{permlink}"
   }
 }
