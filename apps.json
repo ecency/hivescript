@@ -42,5 +42,10 @@
     "name": "Leo Finance",
     "homepage": "https://leofinance.io",
     "url_scheme": "https://leofinance.io/{category}/@{username}/{permlink}"
+  },
+    "beempy": {
+    "name": "beempy",
+    "homepage": "https://hive.blog",
+    "url_scheme": "https://hive.blog/{category}/@{username}/{permlink}"
   }
 }
