@@ -45,7 +45,6 @@
   },
   "beempy": {
     "name": "beempy",
-    "homepage": "https://hive.blog",
-    "url_scheme": "https://hive.blog/{category}/@{username}/{permlink}"
+    "homepage": "https://github.com/holgern/beem",
   }
 }
