@@ -52,5 +52,9 @@
     "name": "DTube",
     "homepage": "https://d.tube",
     "url_scheme": "https://d.tube/v/{username}/{permlink}"
+  },
+  "beempy": {
+    "name": "beempy",
+    "homepage": "https://github.com/holgern/beem"
   }
 }
