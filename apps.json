@@ -43,6 +43,11 @@
     "homepage": "https://leofinance.io",
     "url_scheme": "https://leofinance.io/{category}/@{username}/{permlink}"
   },
+  "engrave": {
+    "name": "Dblog",
+    "homepage": "https://dblog.org/",
+    "url_scheme": "https://{domain}/{permlink}"
+  },
   "clicktrackprofit": {
     "name": "ClickTrackProfit",
     "homepage": "https://www.ctptalk.com",
