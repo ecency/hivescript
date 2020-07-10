@@ -4,39 +4,20 @@
     "homepage": "https://hive.blog",
     "url_scheme": "https://hive.blog/{category}/@{username}/{permlink}"
   },
-  "ecency": {
-    "name": "Ecency",
-    "homepage": "https://ecency.com",
-    "url_scheme": "https://ecency.com/{category}/@{username}/{permlink}"
-  },
-  "esteem": {
-    "name": "Esteem",
-    "homepage": "https://ecency.com",
-    "url_scheme": "https://ecency.com/{category}/@{username}/{permlink}"
-  },
   "peakd": {
     "name": "PeakD",
     "homepage": "https://peakd.com",
     "url_scheme": "https://peakd.com/{category}/@{username}/{permlink}"
   },
-  "steempeak": {
-    "name": "Steempeak",
-    "homepage": "https://peakd.com",
-    "url_scheme": "https://peakd.com/{category}/@{username}/{permlink}"
-  },
-  "steempress": {
-    "name": "SteemPress",
-    "homepage": "https://wordpress.org/plugins/steempress/"
+  "ecency": {
+    "name": "Ecency",
+    "homepage": "https://ecency.com",
+    "url_scheme": "https://ecency.com/{category}/@{username}/{permlink}"
   },
   "actifit": {
     "name": "Actifit",
     "homepage": "https://actifit.io",
     "url_scheme": "https://actifit.io/@{username}/{permlink}"
-  },
-  "travelfeed": {
-    "name": "TravelFeed",
-    "homepage": "https://travelfeed.io",
-    "url_scheme": "https://travelfeed.io/@{username}/{permlink}"
   },
   "3speak": {
     "name": "3Speak",
@@ -53,6 +34,20 @@
     "homepage": "https://leofinance.io",
     "url_scheme": "https://leofinance.io/{category}/@{username}/{permlink}"
   },
+  "esteem": {
+    "name": "Esteem",
+    "homepage": "https://ecency.com",
+    "url_scheme": "https://ecency.com/{category}/@{username}/{permlink}"
+  },
+  "steempress": {
+    "name": "SteemPress",
+    "homepage": "https://wordpress.org/plugins/steempress/"
+  },
+  "travelfeed": {
+    "name": "TravelFeed",
+    "homepage": "https://travelfeed.io",
+    "url_scheme": "https://travelfeed.io/@{username}/{permlink}"
+  },
   "clicktrackprofit": {
     "name": "ClickTrackProfit",
     "homepage": "https://www.ctptalk.com",
@@ -62,15 +57,5 @@
     "name": "DTube",
     "homepage": "https://d.tube",
     "url_scheme": "https://d.tube/v/{username}/{permlink}"
-  },
-  "steemit": {
-    "name": "Steemit",
-    "homepage": "https://steemit.com",
-    "url_scheme": "https://steemit.com/{category}/@{username}/{permlink}"
-  },
-  "busy": {
-    "name": "Busy",
-    "homepage": "https://busy.org",
-    "url_scheme": "https://busy.org/@{username}/{permlink}"
   }
 }
