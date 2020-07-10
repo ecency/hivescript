@@ -43,6 +43,10 @@
     "name": "SteemPress",
     "homepage": "https://wordpress.org/plugins/steempress/"
   },
+  "beempy": {	
+    "name": "beempy",	
+    "homepage": "https://github.com/holgern/beem"	
+  },
   "travelfeed": {
     "name": "TravelFeed",
     "homepage": "https://travelfeed.io",
