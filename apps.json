@@ -21,8 +21,8 @@
   },
   "3speak": {
     "name": "3Speak",
-    "homepage": "https://3speak.online",
-    "url_scheme": "https://3speak.online/watch?v={username}/{permlink}"
+    "homepage": "https://3speak.co",
+    "url_scheme": "https://3speak.co/watch?v={username}/{permlink}"
   },
   "stemsocial": {
     "name": "STEMsocial",

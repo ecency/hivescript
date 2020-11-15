@@ -1,6 +1,6 @@
 {
   "name": "@hiveio/hivescript",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "repository": {
     "url": "git://github.com/ledgerconnect/hivescript.git",
     "type": "git"
