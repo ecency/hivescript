@@ -73,3 +73,7 @@ This section could be part of content rendering or external link clicking event 
   }
 
 ```
+
+# Contributors
+
+[Hive community](https://hive.io)
