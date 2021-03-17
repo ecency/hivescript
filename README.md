@@ -31,7 +31,7 @@ if (app) {
     }
 }
 // return proper canonical link for post
-return scheme
+const canonicalLink = scheme
   .replace("{category}", entry.category)
   .replace("{username}", entry.author)
   .replace("{permlink}", entry.permlink);
@@ -47,7 +47,7 @@ This section could be part of wallet page in your Dapp where user enters account
 ```
 import badActors from '@hiveio/hivescript/bad-actors.json';
 
-  if (badActors.includes(to)) {
+  if (badActors.includes(to_account)) {
     console.warn("Use caution sending to this account. Please double check your spelling for possible phishing.");
   }
 
