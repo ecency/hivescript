@@ -1,6 +1,6 @@
 {
   "name": "@hiveio/hivescript",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "repository": {
     "url": "git://github.com/ecency/hivescript.git",
     "type": "git"

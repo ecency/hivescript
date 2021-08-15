@@ -21,8 +21,8 @@
   },
   "3speak": {
     "name": "3Speak",
-    "homepage": "https://3speak.co",
-    "url_scheme": "https://3speak.co/watch?v={username}/{permlink}"
+    "homepage": "https://3speak.tv",
+    "url_scheme": "https://3speak.tv/watch?v={username}/{permlink}"
   },
   "stemsocial": {
     "name": "STEMsocial",
@@ -61,5 +61,10 @@
     "name": "DTube",
     "homepage": "https://d.tube",
     "url_scheme": "https://d.tube/v/{username}/{permlink}"
+  },
+  "steemit": {
+    "name": "Steemit",
+    "homepage": "https://steemit.com",
+    "url_scheme": "https://steemit.com/{category}/@{username}/{permlink}"
   }
 }
