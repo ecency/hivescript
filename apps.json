@@ -66,5 +66,10 @@
     "name": "Steemit",
     "homepage": "https://steemit.com",
     "url_scheme": "https://steemit.com/{category}/@{username}/{permlink}"
-  }
+  },
+   "inji": {
+    "name": "inji",
+    "homepage": "https://inji.com",
+    "url_scheme": "https://inji.com/hive/@{username}/{permlink}"
+  },
 }
