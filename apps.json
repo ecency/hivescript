@@ -71,5 +71,5 @@
     "name": "inji",
     "homepage": "https://inji.com",
     "url_scheme": "https://inji.com/hive/@{username}/{permlink}"
-  },
+  }
 }
