@@ -67,9 +67,14 @@
     "homepage": "https://steemit.com",
     "url_scheme": "https://steemit.com/{category}/@{username}/{permlink}"
   },
-   "inji": {
+  "inji": {
     "name": "inji",
     "homepage": "https://inji.com",
     "url_scheme": "https://inji.com/hive/@{username}/{permlink}"
+  },
+  "splintertalk": {
+    "name": "splintertalk",
+    "homepage": "https://www.inji.com",
+    "url_scheme": "https://www.splintertalk.io/@{username}/{permlink}"
   }
 }
