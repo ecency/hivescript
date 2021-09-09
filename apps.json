@@ -74,7 +74,12 @@
   },
   "splintertalk": {
     "name": "splintertalk",
-    "homepage": "https://www.inji.com",
+    "homepage": "https://www.splintertalk.io",
     "url_scheme": "https://www.splintertalk.io/@{username}/{permlink}"
+  },
+  "proofofbrain": {
+    "name": "proofofbrain",
+    "homepage": "https://proofofbrain.io",
+    "url_scheme": "https://proofofbrain.io/{category}/@{username}/{permlink}"
   }
 }
