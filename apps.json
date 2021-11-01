@@ -81,5 +81,10 @@
     "name": "proofofbrain",
     "homepage": "https://proofofbrain.io",
     "url_scheme": "https://proofofbrain.io/{category}/@{username}/{permlink}"
+  },
+  "eskateraleigh": {
+    "name": "eskateraleigh",
+    "homepage": "https://eskateraleigh.com",
+    "url_scheme": "https://eskateraleigh.com/blogPost/@{username}/{permlink}"
   }
 }
