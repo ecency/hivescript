@@ -1,9 +1,10 @@
 {
   "name": "@hiveio/hivescript",
-  "version": "1.2.7",
+  "version": "1.2.9",
   "repository": {
     "url": "git://github.com/ecency/hivescript.git",
     "type": "git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }
