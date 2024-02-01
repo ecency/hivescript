@@ -49,8 +49,8 @@
   },
   "travelfeed": {
     "name": "TravelFeed",
-    "homepage": "https://travelfeed.io",
-    "url_scheme": "https://travelfeed.io/@{username}/{permlink}"
+    "homepage": "https://travelfeed.com",
+    "url_scheme": "https://travelfeed.com/@{username}/{permlink}"
   },
   "clicktrackprofit": {
     "name": "ClickTrackProfit",
