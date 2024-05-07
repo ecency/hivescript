@@ -86,5 +86,10 @@
     "name": "eskateraleigh",
     "homepage": "https://eskateraleigh.com",
     "url_scheme": "https://eskateraleigh.com/blogPost/@{username}/{permlink}"
+  },
+  "propolis.eng": {
+    "name": "propolis.eng",
+    "homepage": "https://propol.is",
+    "url_scheme": "https://propol.is/wiki/{permlink}"
   }
 }
