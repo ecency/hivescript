@@ -1,10 +1,33 @@
 {
   "name": "@hiveio/hivescript",
-  "version": "1.3.4",
+  "version": "1.4.0",
+  "description": "An open standard for Hive based apps: canonical URL schemes, phishing account and domain blocklists.",
+  "keywords": [
+    "hive",
+    "blockchain",
+    "canonical",
+    "phishing",
+    "blocklist",
+    "bad-actors",
+    "bad-domains"
+  ],
+  "homepage": "https://github.com/ecency/hivescript#readme",
+  "bugs": {
+    "url": "https://github.com/ecency/hivescript/issues"
+  },
   "repository": {
     "url": "git://github.com/ecency/hivescript.git",
     "type": "git"
   },
   "license": "MIT",
+  "files": [
+    "apps.json",
+    "bad-actors.json",
+    "bad-domains.json",
+    "good-domains.json",
+    "spaminator-domains.json",
+    "spaminator-all.json",
+    "README.md"
+  ],
   "dependencies": {}
 }

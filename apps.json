@@ -1,95 +1,90 @@
 {
-  "hiveblog": {
-    "name": "Hive blog",
-    "homepage": "https://hive.blog",
-    "url_scheme": "https://hive.blog/{category}/@{username}/{permlink}"
-  },
-  "peakd": {
-    "name": "PeakD",
-    "homepage": "https://peakd.com",
-    "url_scheme": "https://peakd.com/{category}/@{username}/{permlink}"
-  },
-  "ecency": {
-    "name": "Ecency",
-    "homepage": "https://ecency.com",
-    "url_scheme": "https://ecency.com/{category}/@{username}/{permlink}"
+  "3speak": {
+    "name": "3Speak",
+    "homepage": "https://3speak.tv",
+    "url_scheme": "https://3speak.tv/watch?v={username}/{permlink}"
   },
   "actifit": {
     "name": "Actifit",
     "homepage": "https://actifit.io",
     "url_scheme": "https://actifit.io/@{username}/{permlink}"
   },
-  "3speak": {
-    "name": "3Speak",
-    "homepage": "https://3speak.tv",
-    "url_scheme": "https://3speak.tv/watch?v={username}/{permlink}"
-  },
-  "stemsocial": {
-    "name": "STEMsocial",
-    "homepage": "https://stem.openhive.network",
-    "url_scheme": "https://stem.openhive.network/#!/@{username}/{permlink}"
-  },
-  "leofinance": {
-    "name": "Leo Finance",
-    "homepage": "https://leofinance.io",
-    "url_scheme": "https://leofinance.io/{category}/@{username}/{permlink}"
-  },
-  "esteem": {
-    "name": "Esteem",
-    "homepage": "https://ecency.com",
-    "url_scheme": "https://ecency.com/{category}/@{username}/{permlink}"
-  },
-  "steempress": {
-    "name": "SteemPress",
-    "homepage": "https://wordpress.org/plugins/steempress/"
-  },
-  "beempy": {	
-    "name": "beempy",	
-    "homepage": "https://github.com/holgern/beem"	
-  },
-  "travelfeed": {
-    "name": "TravelFeed",
-    "homepage": "https://travelfeed.com",
-    "url_scheme": "https://travelfeed.com/@{username}/{permlink}"
-  },
-  "clicktrackprofit": {
-    "name": "ClickTrackProfit",
-    "homepage": "https://www.ctptalk.com",
-    "url_scheme": "https://www.ctptalk.com/{category}/@{username}/{permlink}"
+  "beempy": {
+    "name": "beempy",
+    "homepage": "https://github.com/holgern/beem"
   },
   "dtube": {
     "name": "DTube",
     "homepage": "https://d.tube",
     "url_scheme": "https://d.tube/v/{username}/{permlink}"
   },
-  "steemit": {
-    "name": "Steemit",
-    "homepage": "https://steemit.com",
-    "url_scheme": "https://steemit.com/{category}/@{username}/{permlink}"
+  "ecency": {
+    "name": "Ecency",
+    "homepage": "https://ecency.com",
+    "url_scheme": "https://ecency.com/@{username}/{permlink}"
   },
-  "inji": {
-    "name": "inji",
-    "homepage": "https://inji.com",
-    "url_scheme": "https://inji.com/hive/@{username}/{permlink}"
+  "esteem": {
+    "name": "Esteem",
+    "homepage": "https://ecency.com",
+    "url_scheme": "https://ecency.com/@{username}/{permlink}"
+  },
+  "hiveblog": {
+    "name": "Hive blog",
+    "homepage": "https://hive.blog",
+    "url_scheme": "https://hive.blog/{category}/@{username}/{permlink}"
+  },
+  "leofinance": {
+    "name": "InLeo",
+    "homepage": "https://inleo.io",
+    "url_scheme": "https://inleo.io/@{username}/{permlink}"
+  },
+  "leothreads": {
+    "name": "InLeo Threads",
+    "homepage": "https://inleo.io",
+    "url_scheme": "https://inleo.io/@{username}/{permlink}"
+  },
+  "liketu": {
+    "name": "Liketu",
+    "homepage": "https://liketu.com",
+    "url_scheme": "https://liketu.com/post/{username}/{permlink}"
+  },
+  "peakd": {
+    "name": "PeakD",
+    "homepage": "https://peakd.com",
+    "url_scheme": "https://peakd.com/{category}/@{username}/{permlink}"
+  },
+  "propolis.eng": {
+    "name": "propolis.eng",
+    "homepage": "https://propol.is",
+    "url_scheme": "https://propol.is/wiki/{permlink}"
+  },
+  "scrobble.life": {
+    "name": "Scrobble.life",
+    "homepage": "https://scrobble.life",
+    "url_scheme": "https://scrobble.life/p/{username}/{permlink}"
   },
   "splintertalk": {
     "name": "splintertalk",
     "homepage": "https://www.splintertalk.io",
     "url_scheme": "https://www.splintertalk.io/@{username}/{permlink}"
   },
-  "proofofbrain": {
-    "name": "proofofbrain",
-    "homepage": "https://proofofbrain.io",
-    "url_scheme": "https://proofofbrain.io/{category}/@{username}/{permlink}"
+  "steemit": {
+    "name": "Steemit",
+    "homepage": "https://steemit.com",
+    "url_scheme": "https://steemit.com/{category}/@{username}/{permlink}"
   },
-  "eskateraleigh": {
-    "name": "eskateraleigh",
-    "homepage": "https://eskateraleigh.com",
-    "url_scheme": "https://eskateraleigh.com/blogPost/@{username}/{permlink}"
+  "steempress": {
+    "name": "SteemPress",
+    "homepage": "https://wordpress.org/plugins/steempress/"
   },
-  "propolis.eng": {
-    "name": "propolis.eng",
-    "homepage": "https://propol.is",
-    "url_scheme": "https://propol.is/wiki/{permlink}"
+  "travelfeed": {
+    "name": "TravelFeed",
+    "homepage": "https://travelfeed.com",
+    "url_scheme": "https://travelfeed.com/@{username}/{permlink}"
+  },
+  "waivio": {
+    "name": "Waivio",
+    "homepage": "https://www.waivio.com",
+    "url_scheme": "https://www.waivio.com/@{username}/{permlink}"
   }
 }
