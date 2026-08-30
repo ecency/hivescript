@@ -29,8 +29,5 @@
     "spaminator-all.json",
     "README.md"
   ],
-  "scripts": {
-    "test": "node scripts/validate.mjs"
-  },
   "dependencies": {}
 }

@@ -71,6 +71,12 @@ function canonicalLink(entry, defaultScheme = DEFAULT_SCHEME) {
 }
 ```
 
+### Contributing
+
+`node scripts/validate.mjs` checks every data file: shape, sorting, duplicates, casing,
+good/bad overlap, public suffixes and `apps.json` placeholders. CI runs it on every pull
+request and again before publish. No dependencies to install.
+
 ### Adding or changing an app
 
 Open a pull request against `apps.json`. Entries are sorted by key. A `url_scheme` must be
@@ -118,6 +124,11 @@ converts internationalised domains to punycode, which is what the list stores, s
 domains such as `șteemit.com` (`xn--teemit-2lc.com`) are caught. Then walk the parent domains,
 otherwise `login.phishing-site.tk` slips past an entry for `phishing-site.tk`.
 
+Because consumers walk parent domains, every entry in these lists has to be a registrable
+domain. A public suffix such as `web.app`, `github.io` or `co.uk` would condemn every site
+hosted under it, so list the specific abusive hostname instead. CI rejects entries that are
+public suffixes.
+
 ```js
 import badDomains from "@hiveio/hivescript/bad-domains.json";
 
@@ -126,7 +137,9 @@ const BAD_DOMAINS = new Set(badDomains);
 function isBadDomain(externalLink) {
   let host;
   try {
-    host = new URL(externalLink).hostname.toLowerCase().replace(/^www\./, "");
+    // A terminal dot is a valid, fully qualified host: browsers resolve
+    // "steemit24.cf." exactly like "steemit24.cf", so strip it before matching.
+    host = new URL(externalLink).hostname.toLowerCase().replace(/\.$/, "").replace(/^www\./, "");
   } catch {
     return false; // not a URL we can judge
   }

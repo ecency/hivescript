@@ -18,6 +18,16 @@ const LISTS = [
 const ACCOUNT = /^[a-z][a-z0-9.-]{2,15}$/;
 const DOMAIN = /^[a-z0-9-]+(\.[a-z0-9-]+)+$/;
 
+// A blocklist entry that is itself a public suffix ("web.app", "co.uk", "github.io")
+// condemns every site hosted under it, because consumers walk parent domains when
+// matching. Only registrable domains belong in these lists.
+const PUBLIC_SUFFIXES = new Set(
+  readFileSync(new URL("./public-suffix-list.txt", import.meta.url), "utf8")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter((l) => l && !l.startsWith("#"))
+);
+
 const lists = {};
 
 for (const file of LISTS) {
@@ -62,8 +72,14 @@ for (const file of LISTS) {
 
   const shape = file.includes("domains") ? DOMAIN : ACCOUNT;
   for (const entry of data) {
-    if (typeof entry === "string" && /^[\x00-\x7F]*$/.test(entry) && !shape.test(entry)) {
-      fail(file, `malformed entry: ${entry}`);
+    if (typeof entry !== "string" || !/^[\x00-\x7F]*$/.test(entry)) continue;
+    if (!shape.test(entry)) fail(file, `malformed entry: ${entry}`);
+    if (file.includes("domains") && PUBLIC_SUFFIXES.has(entry)) {
+      fail(
+        file,
+        `${entry} is a public suffix, so listing it blocks every site hosted under it. ` +
+          `List the specific abusive hostname instead.`
+      );
     }
   }
 }
@@ -94,6 +110,11 @@ if (apps) {
     if (id !== id.toLowerCase()) fail("apps.json", `${id}: key must be lowercase, it is matched against json_metadata.app`);
     if (typeof app?.name !== "string" || !app.name) fail("apps.json", `${id}: missing "name"`);
 
+    // Common fields first: entries without a url_scheme still have a homepage.
+    if (app?.homepage !== undefined && !String(app.homepage).startsWith("https://")) {
+      fail("apps.json", `${id}: homepage must be https`);
+    }
+
     // url_scheme is optional: publishing tools with no web home of their own omit it.
     if (app?.url_scheme === undefined) continue;
 
@@ -109,9 +130,6 @@ if (apps) {
       if (!["{category}", "{username}", "{permlink}"].includes(token)) {
         fail("apps.json", `${id}: unknown placeholder ${token}`);
       }
-    }
-    if (app.homepage !== undefined && !String(app.homepage).startsWith("https://")) {
-      fail("apps.json", `${id}: homepage must be https`);
     }
   }
 }
