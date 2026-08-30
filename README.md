@@ -57,9 +57,12 @@ function canonicalLink(entry, defaultScheme = DEFAULT_SCHEME) {
     }
   }
 
-  // `app` is normally "ecency/3.1.4" but some apps write an object instead.
-  const raw = typeof meta?.app === "string" ? meta.app : meta?.app?.name;
-  const identifier = raw?.split("/")[0].trim().toLowerCase();
+  // `app` is normally "ecency/3.1.4" but some apps write an object instead. Neither form
+  // is guaranteed: json_metadata is arbitrary author-supplied JSON, so check the type
+  // before calling string methods on it.
+  const app = meta?.app;
+  const raw = typeof app === "string" ? app : app?.name;
+  const identifier = typeof raw === "string" ? raw.split("/")[0].trim().toLowerCase() : undefined;
 
   // Falls back when the app is unknown OR known but has no url_scheme of its own.
   const scheme = (identifier && apps[identifier]?.url_scheme) || defaultScheme;

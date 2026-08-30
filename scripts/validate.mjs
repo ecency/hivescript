@@ -21,12 +21,43 @@ const DOMAIN = /^[a-z0-9-]+(\.[a-z0-9-]+)+$/;
 // A blocklist entry that is itself a public suffix ("web.app", "co.uk", "github.io")
 // condemns every site hosted under it, because consumers walk parent domains when
 // matching. Only registrable domains belong in these lists.
-const PUBLIC_SUFFIXES = new Set(
-  readFileSync(new URL("./public-suffix-list.txt", import.meta.url), "utf8")
-    .split("\n")
-    .map((l) => l.trim())
-    .filter((l) => l && !l.startsWith("#"))
-);
+//
+// The three PSL rule types all matter here. "*.ck" makes "foo.ck" a public suffix, and
+// "!www.ck" carves "www.ck" back out as registrable, so neither can be flattened into a
+// plain suffix without getting the answer wrong in one direction or the other.
+const RULES = new Set();
+const WILDCARDS = new Set();
+const EXCEPTIONS = new Set();
+
+for (const line of readFileSync(new URL("./public-suffix-list.txt", import.meta.url), "utf8").split("\n")) {
+  const rule = line.trim();
+  if (!rule || rule.startsWith("#")) continue;
+  if (rule.startsWith("!")) EXCEPTIONS.add(rule.slice(1));
+  else if (rule.startsWith("*.")) WILDCARDS.add(rule.slice(2));
+  else RULES.add(rule);
+}
+
+// https://publicsuffix.org/list/ "Algorithm"
+function publicSuffixOf(domain) {
+  const labels = domain.split(".");
+
+  // Exception rules win outright: the suffix is the rule minus its leftmost label.
+  for (let i = 0; i < labels.length; i++) {
+    if (EXCEPTIONS.has(labels.slice(i).join("."))) return labels.slice(i + 1).join(".");
+  }
+
+  // Otherwise the longest matching rule prevails. i ascends, so the longest comes first.
+  for (let i = 0; i < labels.length; i++) {
+    const candidate = labels.slice(i).join(".");
+    if (RULES.has(candidate)) return candidate;
+    if (i < labels.length - 1 && WILDCARDS.has(labels.slice(i + 1).join("."))) return candidate;
+  }
+
+  // The implicit "*" rule: the rightmost label.
+  return labels[labels.length - 1];
+}
+
+const isPublicSuffix = (domain) => publicSuffixOf(domain) === domain;
 
 const lists = {};
 
@@ -74,7 +105,7 @@ for (const file of LISTS) {
   for (const entry of data) {
     if (typeof entry !== "string" || !/^[\x00-\x7F]*$/.test(entry)) continue;
     if (!shape.test(entry)) fail(file, `malformed entry: ${entry}`);
-    if (file.includes("domains") && PUBLIC_SUFFIXES.has(entry)) {
+    if (file.includes("domains") && isPublicSuffix(entry)) {
       fail(
         file,
         `${entry} is a public suffix, so listing it blocks every site hosted under it. ` +
@@ -101,8 +132,14 @@ try {
   fail("apps.json", `not valid JSON (${e.message})`);
 }
 
+if (apps !== undefined && (typeof apps !== "object" || apps === null || Array.isArray(apps))) {
+  fail("apps.json", "must be an object keyed by app identifier");
+  apps = undefined;
+}
+
 if (apps) {
   const keys = Object.keys(apps);
+  if (!keys.length) fail("apps.json", "registry is empty");
   const sorted = [...keys].sort();
   if (keys.some((k, i) => k !== sorted[i])) fail("apps.json", "keys must be sorted alphabetically");
 
