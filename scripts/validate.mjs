@@ -148,8 +148,14 @@ if (apps) {
     if (typeof app?.name !== "string" || !app.name) fail("apps.json", `${id}: missing "name"`);
 
     // Common fields first: entries without a url_scheme still have a homepage.
-    if (app?.homepage !== undefined && !String(app.homepage).startsWith("https://")) {
-      fail("apps.json", `${id}: homepage must be https`);
+    if (app?.homepage !== undefined) {
+      if (typeof app.homepage !== "string") {
+        fail("apps.json", `${id}: homepage must be a string`);
+      } else if (!app.homepage.startsWith("https://")) {
+        fail("apps.json", `${id}: homepage must be https`);
+      } else if (!URL.canParse(app.homepage)) {
+        fail("apps.json", `${id}: homepage is not a valid URL: ${app.homepage}`);
+      }
     }
 
     // url_scheme is optional: publishing tools with no web home of their own omit it.

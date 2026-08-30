@@ -80,6 +80,12 @@ function canonicalLink(entry, defaultScheme = DEFAULT_SCHEME) {
 good/bad overlap, public suffixes and `apps.json` placeholders. CI runs it on every pull
 request and again before publish. No dependencies to install.
 
+The public suffix check reads `scripts/public-suffix-list.txt`, a snapshot of the
+[Public Suffix List](https://publicsuffix.org/list/) refreshed by
+`node scripts/update-public-suffix-list.mjs`. That snapshot is MPL 2.0, carries its upstream
+notice, and is development tooling only: it is outside the `files` allowlist, so the npm
+package stays MIT.
+
 ### Adding or changing an app
 
 Open a pull request against `apps.json`. Entries are sorted by key. A `url_scheme` must be
